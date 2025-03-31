@@ -2,12 +2,12 @@ import React from "react";
 import "./navbar.css";
 import portfolio from "../Image/portfolio.png";
 import about from "../Image/about.png";
-import portfolio1 from "../Image/portfolio1.webp"
-import portfolio2 from "../Image/portfolio2.webp"
-import portfolio3 from "../Image/portfolio3.jpg"
-import portfolio4 from "../Image/portfolio4.jpg"
-import portfolio5 from "../Image/portfolio5.webp"
-import portfolio6 from "../Image/portfolio6.webp"
+import portfolio1 from "../Image/portfolio1.webp";
+import portfolio2 from "../Image/portfolio2.webp";
+import portfolio3 from "../Image/portfolio3.jpg";
+import portfolio4 from "../Image/portfolio4.jpg";
+import portfolio5 from "../Image/portfolio5.webp";
+import portfolio6 from "../Image/portfolio6.webp";
 
 const navbar = () => {
   return (
@@ -99,11 +99,9 @@ const navbar = () => {
             <i class="bx bx-code-alt"></i>
             <h3>Web development</h3>
             <p>
-              I provide frontend development services, building responsive and
-              user-friendly web applications using React, JavaScript, and
-              RESTful APIs. My expertise includes custom web development, API
-              integration, performance optimization, and UI/UX enhancements to
-              deliver high-quality, scalable solutions.
+              I build responsive, user-friendly web apps with React, JavaScript,
+              and RESTful APIs, specializing in custom development, API
+              integration, and performance optimization for scalable solutions.
             </p>
             <a href="#" className="btn">
               Read More
@@ -113,11 +111,9 @@ const navbar = () => {
             <i class="bx bx-bar-chart-alt"></i>
             <h3>Digital marketing</h3>
             <p>
-              I provide digital marketing solutions to help businesses grow
-              online through SEO-optimized web development, social media
-              marketing, and high-converting landing pages. By combining modern
-              marketing strategies with responsive design, I enhance brand
-              identity and drive measurable results.
+              I offer digital marketing solutions, including SEO-optimized web
+              development, social media marketing, and high-converting landing
+              pages to boost brand identity and drive results.
             </p>
             <a href="#" className="btn">
               Read More
@@ -127,11 +123,9 @@ const navbar = () => {
             <i class="bx bxs-paint"></i>
             <h3>UI/UX Design</h3>
             <p>
-              I create intuitive, visually appealing, and user-friendly UI/UX
-              designs using modern tools like Figma, Adobe XD, and Tailwind CSS.
-              By combining user-centric design principles with performance
-              optimization, I ensure seamless and engaging experiences across
-              all devices.
+              I design intuitive, user-friendly UI/UX with Figma, Adobe XD, and
+              Tailwind CSS, ensuring seamless, engaging experiences with
+              performance optimization.
             </p>
             <a href="#" className="btn">
               Read More
@@ -156,7 +150,9 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="#"><i class='bx bx-link-external'></i></a>
+              <a href="#">
+                <i class="bx bx-link-external"></i>
+              </a>
             </div>
           </div>
           <div className="portfolio-box">
@@ -170,7 +166,9 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="#"><i class='bx bx-link-external'></i></a>
+              <a href="#">
+                <i class="bx bx-link-external"></i>
+              </a>
             </div>
           </div>
           <div className="portfolio-box">
@@ -184,7 +182,9 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="#"><i class='bx bx-link-external'></i></a>
+              <a href="#">
+                <i class="bx bx-link-external"></i>
+              </a>
             </div>
           </div>
           <div className="portfolio-box">
@@ -198,7 +198,9 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="#"><i class='bx bx-link-external'></i></a>
+              <a href="#">
+                <i class="bx bx-link-external"></i>
+              </a>
             </div>
           </div>
           <div className="portfolio-box">
@@ -212,7 +214,9 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="#"><i class='bx bx-link-external'></i></a>
+              <a href="#">
+                <i class="bx bx-link-external"></i>
+              </a>
             </div>
           </div>
           <div className="portfolio-box">
@@ -226,14 +230,18 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="#"><i class='bx bx-link-external'></i></a>
+              <a href="#">
+                <i class="bx bx-link-external"></i>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <section className="contact" id="contact">
-        <h2 className="heading">Contact <span>Me!</span></h2>
+        <h2 className="heading">
+          Contact <span>Me!</span>
+        </h2>
 
         <form action="#">
           <div className="input-box">
@@ -244,10 +252,27 @@ const navbar = () => {
             <input type="number" placeholder="Mobile" />
             <input type="text" placeholder="Email Subject" />
           </div>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+          ></textarea>
           <input type="submit" value="Send Message" className="btn" />
         </form>
       </section>
+
+      <footer className="footer">
+        <div className="footer-text">
+          <p>Copyright &copy; 2025 by codehal | All Right Reserved.</p>
+        </div>
+        <div className="footer-iconTop">
+          <a href="#">
+            <i class="bx bx-up-arrow-alt"></i>
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };

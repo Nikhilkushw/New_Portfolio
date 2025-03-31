@@ -77,7 +77,7 @@ section{
 }
 
 .home-img img {
-  width: 35vw;
+  width: 30vw;
 }
 
 .home-content h3{
@@ -150,7 +150,7 @@ span{
 }
 
 .about-img img{
-  width: 35vw;
+  width: 32vw;
 }
 
 .heading{
@@ -209,7 +209,7 @@ span{
 }
 
 .services-box p{
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin: 1rem 0 3rem;
 }
 
@@ -332,4 +332,35 @@ span{
 .contact form .btn{
   margin-top: 2rem;
   cursor: pointer;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+}
+
+.footer-text p{
+  font-size: 1.6rem;
+}
+
+.footer-iconTop a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: var(--main-color);
+  border-radius: .8rem; 
+}
+
+.footer-iconTop a:hover{
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i{
+  font-size: 2.4rem;
+  color: var(--second-bg-color);
 }
