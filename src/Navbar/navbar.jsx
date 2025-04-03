@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./navbar.css";
+import Typed from "typed.js";
 import portfolio from "../Image/portfolio.png";
 import about from "../Image/about.png";
 import portfolio1 from "../Image/portfolio1.webp";
@@ -8,24 +9,110 @@ import portfolio3 from "../Image/portfolio3.jpg";
 import portfolio4 from "../Image/portfolio4.jpg";
 import portfolio5 from "../Image/portfolio5.webp";
 import portfolio6 from "../Image/portfolio6.webp";
+import ScrollReveal from "scrollreveal";
 
 const navbar = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isActive, setIsActive] = useState("#home");
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isHidden, setIsHidden] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [lastScrollY, setLastScrollY] = useState(0);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isToggle, setIsToggle] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      setIsHidden(currentScroll > lastScrollY);
+      setLastScrollY(currentScroll);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth >= 768) {
+        setIsToggle(false); // Reset toggle on larger screens
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    const sr = ScrollReveal({
+      distance:'80px',
+      duration: 2000,
+      delay: 200,
+      reset: true,
+    });
+
+    sr.reveal(".home-content, .heading", { origin: "top" });
+    sr.reveal(".home-img, .services-container, .portfolio-box, .contact form", { origin: "bottom" });
+    sr.reveal(".home-content h1, .about-img", { origin: "left" });
+    sr.reveal(".home-content p, .about-content", { origin: "right" });
+
+
+
+    return () => {
+      sr.destroy(); // Clean up to prevent memory leaks
+    };
+  }, []);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const typedElement = useRef(null);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const typedInstance = useRef(null);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    typedInstance.current = new Typed(typedElement.current, {
+      strings: ["Frontend Developer", "YouTuber", "Blogger"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1000,
+      loop: true,
+    });
+
+    return () => {
+      typedInstance.current.destroy(); // Cleanup to prevent memory leaks
+    };
+  }, []);
+
+  const handleNavClick = (section) => {
+    setIsActive(section);
+    setIsHidden(true); // Hide navbar on click
+  };
+
   return (
     <div>
-      <header className="header">
+      <header className={`header ${isHidden ? "hidden" : ""}`}>
         <a href="#" className="logo">
           Portfolio
         </a>
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <nav className="navbar">
-          <a href="#home" className="active">
-            Home
-          </a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        {windowWidth < 768 && (
+          <i 
+            onClick={() => setIsToggle(!isToggle)}
+            className={`bx ${isToggle ? "bx-x" : "bx-menu"}`} 
+            id="menu-icon"
+          ></i>
+        )}
+        <nav className={`navbar ${windowWidth < 768 ? (isToggle ? "active" : "hidden") : ""}`}>
+        <a href="#home" onClick={() => handleNavClick("#home")} className={isActive === "#home" ? "active" : ""}>Home</a>
+        <a href="#about" onClick={() => handleNavClick("#about")} className={isActive === "#about" ? "active" : ""}>About</a>
+        <a href="#services" onClick={() => handleNavClick("#services")} className={isActive === "#services" ? "active" : ""}>Services</a>
+        <a href="#portfolio" onClick={() => handleNavClick("#portfolio")} className={isActive === "#portfolio" ? "active" : ""}>Portfolio</a>
+        <a href="#contact" onClick={() => handleNavClick("#contact")} className={isActive === "#contact" ? "active" : ""}>Contact</a>
+      </nav>
       </header>
 
       <section className="home" id="home">
@@ -33,7 +120,7 @@ const navbar = () => {
           <h3>Hello, It's Me</h3>
           <h1>Nikhil Kushwah</h1>
           <h3>
-            And I'm a <span>Frontend Developer</span>
+            And I'm a <span ref={typedElement} className="multiple-text">Frontend Developer</span>
           </h3>
           <p>
             I am a Front-end Developer skilled in React, JavaScript, and RESTful
@@ -43,16 +130,16 @@ const navbar = () => {
           </p>
           <div className="social-media">
             <a href="#">
-              <i class="bx bxl-facebook"></i>
+              <i className="bx bxl-facebook"></i>
             </a>
             <a href="#">
-              <i class="bx bxl-twitter"></i>
+              <i className="bx bxl-twitter"></i>
             </a>
             <a href="#">
-              <i class="bx bxl-instagram-alt"></i>
+              <i className="bx bxl-instagram-alt"></i>
             </a>
             <a href="#">
-              <i class="bx bxl-linkedin"></i>
+              <i className="bx bxl-linkedin"></i>
             </a>
           </div>
           <a href="#" className="btn">
@@ -96,7 +183,7 @@ const navbar = () => {
         </h2>
         <div className="services-container">
           <div className="services-box">
-            <i class="bx bx-code-alt"></i>
+            <i className="bx bx-code-alt"></i>
             <h3>Web development</h3>
             <p>
               I build responsive, user-friendly web apps with React, JavaScript,
@@ -108,7 +195,7 @@ const navbar = () => {
             </a>
           </div>
           <div className="services-box">
-            <i class="bx bx-bar-chart-alt"></i>
+            <i className="bx bx-bar-chart-alt"></i>
             <h3>Digital marketing</h3>
             <p>
               I offer digital marketing solutions, including SEO-optimized web
@@ -120,7 +207,7 @@ const navbar = () => {
             </a>
           </div>
           <div className="services-box">
-            <i class="bx bxs-paint"></i>
+            <i className="bx bxs-paint"></i>
             <h3>UI/UX Design</h3>
             <p>
               I design intuitive, user-friendly UI/UX with Figma, Adobe XD, and
@@ -151,7 +238,7 @@ const navbar = () => {
                 seamlessly across all devices.
               </p>
               <a href="#">
-                <i class="bx bx-link-external"></i>
+                <i className="bx bx-link-external"></i>
               </a>
             </div>
           </div>
@@ -167,7 +254,7 @@ const navbar = () => {
                 seamlessly across all devices.
               </p>
               <a href="#">
-                <i class="bx bx-link-external"></i>
+                <i className="bx bx-link-external"></i>
               </a>
             </div>
           </div>
@@ -183,7 +270,7 @@ const navbar = () => {
                 seamlessly across all devices.
               </p>
               <a href="#">
-                <i class="bx bx-link-external"></i>
+                <i className="bx bx-link-external"></i>
               </a>
             </div>
           </div>
@@ -199,7 +286,7 @@ const navbar = () => {
                 seamlessly across all devices.
               </p>
               <a href="#">
-                <i class="bx bx-link-external"></i>
+                <i className="bx bx-link-external"></i>
               </a>
             </div>
           </div>
@@ -215,7 +302,7 @@ const navbar = () => {
                 seamlessly across all devices.
               </p>
               <a href="#">
-                <i class="bx bx-link-external"></i>
+                <i className="bx bx-link-external"></i>
               </a>
             </div>
           </div>
@@ -231,7 +318,7 @@ const navbar = () => {
                 seamlessly across all devices.
               </p>
               <a href="#">
-                <i class="bx bx-link-external"></i>
+                <i className="bx bx-link-external"></i>
               </a>
             </div>
           </div>
@@ -269,10 +356,11 @@ const navbar = () => {
         </div>
         <div className="footer-iconTop">
           <a href="#">
-            <i class="bx bx-up-arrow-alt"></i>
+            <i className="bx bx-up-arrow-alt"></i>
           </a>
         </div>
       </footer>
+      {/* Start working from here - video 46:21 */}
     </div>
   );
 };
