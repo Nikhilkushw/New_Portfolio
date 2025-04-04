@@ -13,7 +13,7 @@ import ScrollReveal from "scrollreveal";
 
 const navbar = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [isActive, setIsActive] = useState("/home");
+  const [isActive, setIsActive] = useState("#home");
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isHidden, setIsHidden] = useState(false);
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -96,7 +96,7 @@ const navbar = () => {
   return (
     <div>
       <header className={`header ${isHidden ? "hidden" : ""}`}>
-        <a href="/" className="logo">
+        <a href="#" className="logo">
           Portfolio
         </a>
         {windowWidth < 768 && (
@@ -107,11 +107,11 @@ const navbar = () => {
           ></i>
         )}
         <nav className={`navbar ${windowWidth < 768 ? (isToggle ? "active" : "hidden") : ""}`}>
-        <a href="/home" onClick={() => handleNavClick("/home")} className={isActive === "/home" ? "active" : ""}>Home</a>
-        <a href="/about" onClick={() => handleNavClick("/about")} className={isActive === "/about" ? "active" : ""}>About</a>
-        <a href="/services" onClick={() => handleNavClick("/services")} className={isActive === "/services" ? "active" : ""}>Services</a>
-        <a href="/portfolio" onClick={() => handleNavClick("/portfolio")} className={isActive === "/portfolio" ? "active" : ""}>Portfolio</a>
-        <a href="/contact" onClick={() => handleNavClick("/contact")} className={isActive === "/contact" ? "active" : ""}>Contact</a>
+        <a href="#home" onClick={() => handleNavClick("#home")} className={isActive === "#home" ? "active" : ""}>Home</a>
+        <a href="#about" onClick={() => handleNavClick("#about")} className={isActive === "#about" ? "active" : ""}>About</a>
+        <a href="#services" onClick={() => handleNavClick("#services")} className={isActive === "#services" ? "active" : ""}>Services</a>
+        <a href="#portfolio" onClick={() => handleNavClick("#portfolio")} className={isActive === "#portfolio" ? "active" : ""}>Portfolio</a>
+        <a href="#contact" onClick={() => handleNavClick("#contact")} className={isActive === "#contact" ? "active" : ""}>Contact</a>
       </nav>
       </header>
 
@@ -129,20 +129,20 @@ const navbar = () => {
             back-end, and continuously learning new technologies.
           </p>
           <div className="social-media">
-            <a href="/">
+            <a href="#">
               <i className="bx bxl-facebook"></i>
             </a>
-            <a href="/">
+            <a href="#">
               <i className="bx bxl-twitter"></i>
             </a>
-            <a href="/">
+            <a href="#">
               <i className="bx bxl-instagram-alt"></i>
             </a>
-            <a href="/">
+            <a href="#">
               <i className="bx bxl-linkedin"></i>
             </a>
           </div>
-          <a href="/" className="btn">
+          <a href="#" className="btn">
             Download CV
           </a>
         </div>
@@ -171,7 +171,7 @@ const navbar = () => {
             my problem-solving abilities to stay ahead in the fast-evolving tech
             industry.
           </p>
-          <a href="/" className="btn">
+          <a href="#" className="btn">
             Read More
           </a>
         </div>
@@ -190,7 +190,7 @@ const navbar = () => {
               and RESTful APIs, specializing in custom development, API
               integration, and performance optimization for scalable solutions.
             </p>
-            <a href="/" className="btn">
+            <a href="#" className="btn">
               Read More
             </a>
           </div>
@@ -202,7 +202,7 @@ const navbar = () => {
               development, social media marketing, and high-converting landing
               pages to boost brand identity and drive results.
             </p>
-            <a href="/" className="btn">
+            <a href="#" className="btn">
               Read More
             </a>
           </div>
@@ -214,7 +214,7 @@ const navbar = () => {
               Tailwind CSS, ensuring seamless, engaging experiences with
               performance optimization.
             </p>
-            <a href="/" className="btn">
+            <a href="#" className="btn">
               Read More
             </a>
           </div>
@@ -237,7 +237,7 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="/">
+              <a href="#">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
@@ -253,7 +253,7 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="/">
+              <a href="#">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
@@ -269,7 +269,7 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="/">
+              <a href="#">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
@@ -285,7 +285,7 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="/">
+              <a href="#">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
@@ -301,7 +301,7 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="/">
+              <a href="#">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
@@ -317,7 +317,7 @@ const navbar = () => {
                 optimization, I create engaging web interfaces that work
                 seamlessly across all devices.
               </p>
-              <a href="/">
+              <a href="#">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
@@ -330,7 +330,7 @@ const navbar = () => {
           Contact <span>Me!</span>
         </h2>
 
-        <form action="/">
+        <form action="#">
           <div className="input-box">
             <input type="text" placeholder="Full Name" />
             <input type="email" placeholder="Email Address" />
@@ -355,7 +355,7 @@ const navbar = () => {
           <p>Copyright &copy; 2025 by codehal | All Right Reserved.</p>
         </div>
         <div className="footer-iconTop">
-          <a href="/">
+          <a href="#">
             <i className="bx bx-up-arrow-alt"></i>
           </a>
         </div>
