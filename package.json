@@ -1,9 +1,12 @@
 {
+  "home": "https://github.com/Nikhilkushw/New_Portfolio.git",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -12,6 +15,7 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.1",
     "scrollreveal": "^4.0.9",
     "typed.js": "^2.1.0"
   },
