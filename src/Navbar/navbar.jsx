@@ -76,7 +76,7 @@ const navbar = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     typedInstance.current = new Typed(typedElement.current, {
-      strings: ["Frontend Developer", "YouTuber", "Blogger"],
+      strings: ["Frontend Developer", "Python Developer"],
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 1000,
