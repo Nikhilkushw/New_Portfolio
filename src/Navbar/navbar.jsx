@@ -102,7 +102,7 @@ const navbar = () => {
         {windowWidth < 768 && (
           <i 
             onClick={() => setIsToggle(!isToggle)}
-            className={`bx ${isToggle ? "bx-x" : "bx-menu"}`} 
+            className={`bx ${isToggle ? "bx-x" : "bx-menu"}`}
             id="menu-icon"
           ></i>
         )}
@@ -360,7 +360,6 @@ const navbar = () => {
           </a>
         </div>
       </footer>
-      {/* Start working from here - video 46:21 */}
     </div>
   );
 };
