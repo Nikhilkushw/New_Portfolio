@@ -51,18 +51,18 @@ const navbar = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     const sr = ScrollReveal({
-      distance:'80px',
+      distance: "80px",
       duration: 2000,
       delay: 200,
       reset: true,
     });
 
     sr.reveal(".home-content, .heading", { origin: "top" });
-    sr.reveal(".home-img, .services-container, .portfolio-box, .contact form", { origin: "bottom" });
+    sr.reveal(".home-img, .services-container, .portfolio-box, .contact form", {
+      origin: "bottom",
+    });
     sr.reveal(".home-content h1, .about-img", { origin: "left" });
     sr.reveal(".home-content p, .about-content", { origin: "right" });
-
-
 
     return () => {
       sr.destroy(); // Clean up to prevent memory leaks
@@ -100,19 +100,53 @@ const navbar = () => {
           Portfolio
         </a>
         {windowWidth < 768 && (
-          <i 
+          <i
             onClick={() => setIsToggle(!isToggle)}
             className={`bx ${isToggle ? "bx-x" : "bx-menu"}`}
             id="menu-icon"
           ></i>
         )}
-        <nav className={`navbar ${windowWidth < 768 ? (isToggle ? "active" : "hidden") : ""}`}>
-        <a href="#home" onClick={() => handleNavClick("#home")} className={isActive === "#home" ? "active" : ""}>Home</a>
-        <a href="#about" onClick={() => handleNavClick("#about")} className={isActive === "#about" ? "active" : ""}>About</a>
-        <a href="#services" onClick={() => handleNavClick("#services")} className={isActive === "#services" ? "active" : ""}>Services</a>
-        <a href="#portfolio" onClick={() => handleNavClick("#portfolio")} className={isActive === "#portfolio" ? "active" : ""}>Portfolio</a>
-        <a href="#contact" onClick={() => handleNavClick("#contact")} className={isActive === "#contact" ? "active" : ""}>Contact</a>
-      </nav>
+        <nav
+          className={`navbar ${
+            windowWidth < 768 ? (isToggle ? "active" : "hidden") : ""
+          }`}
+        >
+          <a
+            href="#home"
+            onClick={() => handleNavClick("#home")}
+            className={isActive === "#home" ? "active" : ""}
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            onClick={() => handleNavClick("#about")}
+            className={isActive === "#about" ? "active" : ""}
+          >
+            About
+          </a>
+          <a
+            href="#services"
+            onClick={() => handleNavClick("#services")}
+            className={isActive === "#services" ? "active" : ""}
+          >
+            Services
+          </a>
+          <a
+            href="#portfolio"
+            onClick={() => handleNavClick("#portfolio")}
+            className={isActive === "#portfolio" ? "active" : ""}
+          >
+            Portfolio
+          </a>
+          <a
+            href="#contact"
+            onClick={() => handleNavClick("#contact")}
+            className={isActive === "#contact" ? "active" : ""}
+          >
+            Contact
+          </a>
+        </nav>
       </header>
 
       <section className="home" id="home">
@@ -120,7 +154,10 @@ const navbar = () => {
           <h3>Hello, It's Me</h3>
           <h1>Nikhil Kushwah</h1>
           <h3>
-            And I'm a <span ref={typedElement} className="multiple-text">Frontend Developer</span>
+            And I'm a{" "}
+            <span ref={typedElement} className="multiple-text">
+              Frontend Developer
+            </span>
           </h3>
           <p>
             I am a Front-end Developer skilled in React, JavaScript, and RESTful
@@ -161,15 +198,11 @@ const navbar = () => {
           </h2>
           <h3>Frontend developer</h3>
           <p>
-            I am a Front-end Developer passionate about building user-friendly
-            and responsive web applications. With expertise in React,
-            JavaScript, and RESTful APIs, I focus on developing scalable
-            solutions that enhance user experience. I have worked on various
-            projects, including a Netflix-inspired platform, utilizing MongoDB
-            and Express.js to integrate front- end and backend functionalities
-            effectively. I am always eager to learn new technologies and improve
-            my problem-solving abilities to stay ahead in the fast-evolving tech
-            industry.
+            I'm a Front-end Developer passionate about creating responsive,
+            user-friendly web applications using React, JavaScript, and RESTful
+            APIs. I focus on building scalable solutions with seamless front-end
+            and back-end integration. Always eager to learn, I continuously
+            refine my skills to stay ahead in the evolving tech landscape.
           </p>
           <a href="#" className="btn">
             Read More
@@ -229,15 +262,15 @@ const navbar = () => {
           <div className="portfolio-box">
             <img src={portfolio1} alt="" />
             <div className="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Portfolio</h4>
               <p>
-                I design visually appealing, responsive, and user-friendly
-                websites that enhance brand identity and user experience. By
-                focusing on modern design principles and performance
-                optimization, I create engaging web interfaces that work
-                seamlessly across all devices.
+                This portfolio featured smooth Three.js animations for an
+                engaging and interactive user experience. Built with React,
+                Tailwind CSS, Bootstrap, and JavaScript, it ensured responsive
+                design and fast performance. It effectively showcased my skills,
+                projects, and resume in a clean, user-friendly layout.
               </p>
-              <a href="#">
+              <a href="https://nikhilkushw.github.io/">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
@@ -245,15 +278,15 @@ const navbar = () => {
           <div className="portfolio-box">
             <img src={portfolio2} alt="" />
             <div className="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Chat-app</h4>
               <p>
-                I design visually appealing, responsive, and user-friendly
-                websites that enhance brand identity and user experience. By
-                focusing on modern design principles and performance
-                optimization, I create engaging web interfaces that work
-                seamlessly across all devices.
+                A chat application enables real-time messaging between users
+                over the internet. It supports features like user
+                authentication, instant message delivery, online status
+                tracking, and message storage using technologies like React,
+                Express.js, MongoDB, and Socket.IO for seamless communication.
               </p>
-              <a href="#">
+              <a href="https://github.com/Nikhilkushw/Chat-app">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
