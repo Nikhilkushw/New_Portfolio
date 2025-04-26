@@ -260,22 +260,6 @@ const navbar = () => {
         </h2>
         <div className="portfolio-container">
           <div className="portfolio-box">
-            <img src={portfolio1} alt="" />
-            <div className="portfolio-layer">
-              <h4>Portfolio</h4>
-              <p>
-                This portfolio featured smooth Three.js animations for an
-                engaging and interactive user experience. Built with React,
-                Tailwind CSS, Bootstrap, and JavaScript, it ensured responsive
-                design and fast performance. It effectively showcased my skills,
-                projects, and resume in a clean, user-friendly layout.
-              </p>
-              <a href="https://nikhilkushw.github.io/">
-                <i className="bx bx-link-external"></i>
-              </a>
-            </div>
-          </div>
-          <div className="portfolio-box">
             <img src={portfolio2} alt="" />
             <div className="portfolio-layer">
               <h4>Chat-app</h4>
@@ -292,17 +276,33 @@ const navbar = () => {
             </div>
           </div>
           <div className="portfolio-box">
+            <img src={portfolio1} alt="" />
+            <div className="portfolio-layer">
+              <h4>Portfolio</h4>
+              <p>
+                This portfolio featured smooth Three.js animations for an
+                engaging and interactive user experience. Built with React,
+                Tailwind CSS, Bootstrap, and JavaScript, it ensured responsive
+                design and fast performance. It effectively showcased my skills,
+                projects, and resume in a clean, user-friendly layout.
+              </p>
+              <a href="https://nikhilkushw.github.io/">
+                <i className="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+          <div className="portfolio-box">
             <img src={portfolio3} alt="" />
             <div className="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Carbon Crunch</h4>
               <p>
-                I design visually appealing, responsive, and user-friendly
-                websites that enhance brand identity and user experience. By
-                focusing on modern design principles and performance
-                optimization, I create engaging web interfaces that work
-                seamlessly across all devices.
+                Carbon Crunch is a frontend web page I designed to showcase my
+                skills, featuring an attractive and user-friendly interface.
+                This project demonstrates my ability to create visually
+                appealing, responsive designs, and has been added to my
+                portfolio as a key accomplishment.
               </p>
-              <a href="#">
+              <a href=" https://nikhilkushw.github.io/carbon/">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
