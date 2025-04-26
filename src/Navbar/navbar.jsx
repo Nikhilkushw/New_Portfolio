@@ -310,15 +310,15 @@ const navbar = () => {
           <div className="portfolio-box">
             <img src={portfolio4} alt="" />
             <div className="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Microsoft Page</h4>
               <p>
-                I design visually appealing, responsive, and user-friendly
-                websites that enhance brand identity and user experience. By
-                focusing on modern design principles and performance
-                optimization, I create engaging web interfaces that work
-                seamlessly across all devices.
+                The Microsoft front page, developed in two days, showcases my
+                skills in frontend design. I added interactive elements,
+                including clickable icons like the Microsoft logo, testing my
+                ability to create a dynamic and user-friendly interface for a
+                professional website.
               </p>
-              <a href="#">
+              <a href="https://nikhilkushw.github.io/Microsoft/">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
