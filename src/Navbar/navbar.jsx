@@ -280,14 +280,13 @@ const navbar = () => {
             <div className="portfolio-layer">
               <h4>Authenticator</h4>
               <p>
-                Built a full-stack authentication system using React,
-                Express.js, MongoDB, nodemailer, and JWT. The app supports user
-                registration, login, password protection with hashing, and
-                session management using secure cookies. Implemented protected
-                routes, role-based redirects, and real-time toast notifications
-                for user feedback.
+                Built a full-stack authentication system with React, Express.js,
+                and MongoDB, featuring user registration, login, password
+                hashing, secure cookies, and protected routes. Included
+                role-based redirects and real-time toast notifications for
+                better UX.
               </p>
-              <a href="#">
+              <a href="https://github.com/Nikhilkushw/Authenticator">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
