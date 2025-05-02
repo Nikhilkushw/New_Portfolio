@@ -276,6 +276,23 @@ const navbar = () => {
             </div>
           </div>
           <div className="portfolio-box">
+            <img src={portfolio5} alt="" />
+            <div className="portfolio-layer">
+              <h4>Authenticator</h4>
+              <p>
+                Built a full-stack authentication system using React,
+                Express.js, MongoDB, nodemailer, and JWT. The app supports user
+                registration, login, password protection with hashing, and
+                session management using secure cookies. Implemented protected
+                routes, role-based redirects, and real-time toast notifications
+                for user feedback.
+              </p>
+              <a href="#">
+                <i className="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+          <div className="portfolio-box">
             <img src={portfolio1} alt="" />
             <div className="portfolio-layer">
               <h4>Portfolio</h4>
@@ -319,22 +336,6 @@ const navbar = () => {
                 professional website.
               </p>
               <a href="https://nikhilkushw.github.io/Microsoft/">
-                <i className="bx bx-link-external"></i>
-              </a>
-            </div>
-          </div>
-          <div className="portfolio-box">
-            <img src={portfolio5} alt="" />
-            <div className="portfolio-layer">
-              <h4>Web Design</h4>
-              <p>
-                I design visually appealing, responsive, and user-friendly
-                websites that enhance brand identity and user experience. By
-                focusing on modern design principles and performance
-                optimization, I create engaging web interfaces that work
-                seamlessly across all devices.
-              </p>
-              <a href="#">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
