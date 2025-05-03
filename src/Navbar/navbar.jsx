@@ -166,8 +166,11 @@ const navbar = () => {
             back-end, and continuously learning new technologies.
           </p>
           <div className="social-media">
-            <a href="#">
-              <i className="bx bxl-facebook"></i>
+            <a href="https://www.linkedin.com/in/nikhil-kushwah-428b07231/">
+              <i className="bx bxl-linkedin"></i>
+            </a>
+            <a href="https://github.com/Nikhilkushw">
+              <i className="bx bxl-github"></i>
             </a>
             <a href="#">
               <i className="bx bxl-twitter"></i>
@@ -175,12 +178,15 @@ const navbar = () => {
             <a href="#">
               <i className="bx bxl-instagram-alt"></i>
             </a>
-            <a href="#">
-              <i className="bx bxl-linkedin"></i>
-            </a>
           </div>
-          <a href="#" className="btn">
-            Download CV
+          <a
+          className="cursor-pointer"
+            href="https://drive.google.com/file/d/1SP4LgKUWHVKSxHDiojpURiohhHtzEQjs/view"
+            download="Nikhil_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="btn">Download Resume</button>
           </a>
         </div>
         <div className="home-img">
@@ -270,7 +276,7 @@ const navbar = () => {
                 tracking, and message storage using technologies like React,
                 Express.js, MongoDB, and Socket.IO for seamless communication.
               </p>
-              <a href="https://github.com/Nikhilkushw/Chat-app">
+              <a href="https://chat-app-ijc7.onrender.com/">
                 <i className="bx bx-link-external"></i>
               </a>
             </div>
